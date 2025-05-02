@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.board-container {
+  background-color: #111;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(20, 20px);
+  grid-template-rows: repeat(20, 20px);
+  gap: 1px;
+  width: max-content;
+}
+
+.cell {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+}
+.food {
+  background-color: red;
+}
+.snake {
+  background-color: green;
+}
+.snakeHead {
+  background-color: #113;
+}
+.score {
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+}
