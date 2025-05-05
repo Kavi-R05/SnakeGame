@@ -1,40 +1,80 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  background-color: #9da0f4;
+  font-family: "Segoe UI", sans-serif;
+}
+
 .board-container {
-  background-color: #111;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   gap: 20px;
 }
+
+.score {
+  font-size: 1.8rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+
 .board {
   display: grid;
-  grid-template-columns: repeat(20, 20px);
+  grid-template-columns: repeat(20, 20px); /* Match your totalGridSize */
   grid-template-rows: repeat(20, 20px);
-  gap: 1px;
-  width: max-content;
+  gap: 2px;
+  background-color: #444;
+  padding: 5px;
+  border: 4px solid #888;
+  border-radius: 10px;
 }
 
 .cell {
   width: 20px;
   height: 20px;
-  background-color: white;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Optional subtle grid lines */
+  border-radius: 4px;
 }
-.food {
-  background-color: red;
-}
+
 .snake {
   background-color: green;
 }
+
 .snakeHead {
-  background-color: #113;
+  background-color: lime;
 }
-.score {
-  text-align: center;
-  font-size: 1.5rem;
+
+.food {
+  background-color: red;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 2px rgba(255, 0, 0, 0.5);
+}
+
+.reset-button {
+  background-color: #4caf50;
   color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 0;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.reset-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.reset-button:active {
+  background-color: #3e8e41;
+  transform: scale(1);
 }
